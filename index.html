@@ -1,4 +1,26 @@
-Hello World 
+<body>
+    <p>Google Analytics Test Parameters</p>
+    <div id='source'>
+        Source:
+        <label></label>
+    </div>
+    <div id='medium'>
+        Medium:
+        <label></label>
+    </div>
+    <div id='name'>
+        Name:
+        <label></label>
+    </div>
+    <div id='term'>
+        Term:
+        <label></label>
+    </div>
+    <div id='content'>
+        Content:
+        <label></label>
+    </div>
+</body>
 
 <!-- Google Analytics -->
 <script>
@@ -11,3 +33,28 @@ Hello World
     ga('send', 'pageview');
 </script>
 <!-- End Google Analytics -->
+
+<!-- Google Analytics Test Parameters -->
+<script>
+    const urlSearchParams = new URLSearchParams(window.location.search);
+
+    const sourceValue = urlSearchParams.get('utm_source');
+    const mediumValue = urlSearchParams.get('utm_medium');
+    const nameValue = urlSearchParams.get('utm_name');
+    const termValue = urlSearchParams.get('utm_term');
+    const contentValue = urlSearchParams.get('utm_content');
+
+    const sourceElement = document.getElementById("source").getElementsByTagName('label')[0];
+    const mediumElement = document.getElementById("medium").getElementsByTagName('label')[0];
+    const nameElement = document.getElementById("name").getElementsByTagName('label')[0];
+    const termElement = document.getElementById("term").getElementsByTagName('label')[0];
+    const contentElement = document.getElementById("content").getElementsByTagName('label')[0];
+
+    sourceElement.textContent = sourceValue;
+    mediumValue.textContent = mediumElement;
+    nameValue.textContent = nameElement;
+    termValue.textContent = termElement;
+    contentValue.textContent = contentElement;
+
+</script>
+<!-- End Google Analytics Test Parameters -->
