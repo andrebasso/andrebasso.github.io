@@ -1,3 +1,42 @@
+<style>
+    
+    .custom-input-file {
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: 21px;
+    width: 22px;
+    height: 22px;
+    background-image: url("http://portalkiahml.internal.alfapeople.com.br:5559/images/atendimento-newfile.png");
+    background-repeat: no-repeat;
+}
+    
+    input[type="file"] {
+    z-index: 999;
+    line-height: 0;
+    font-size: 0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 0px;
+    height: 0px !important;
+    overflow: hidden;
+}
+    
+    .custom-input-file:hover .newfile {
+    display: block;
+}
+    
+ .newfile {
+    display: none;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+</style>
 <body>
     <p>Google Analytics Test Parameters</p>
     <div id='source'>
@@ -20,12 +59,15 @@
         Content:
         <label></label>
     </div>
+
+    <div class="custom-input-file" style="display: block;">
+   <label class="newfile">
+      <form id="formAnexo">
+          <input id="newfile" type="file" name="anexo">
+       </form>
+   </label>
+</div>
     
-    <label>With accept</label>
-    <input id="newfile" type="file" name="anexo" onchange="alert(this);" accept="image/*">
-    
-    <label>Without accept</label>
-    <input id="newfile2" type="file" name="anexo2" onchange="alert(this);">
 </body>
 
 <!-- Google Analytics -->
